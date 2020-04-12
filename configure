@@ -615,6 +615,7 @@ build_vendor
 build_cpu
 build
 awa_has_msys
+USE_NLS
 MAIL_MICRO_VERSION
 MAIL_MINOR_VERSION
 MAIL_MAJOR_VERSION
@@ -661,6 +662,7 @@ SHELL'
 ac_subst_files=''
 ac_user_opts='
 enable_option_checking
+enable_nls
 with_build_root
 enable_shared
 enable_default_shared
@@ -1294,6 +1296,7 @@ Optional Features:
   --disable-option-checking  ignore unrecognized --enable/--with options
   --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
   --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --disable-nls           do not use Native Language Support
   --enable-shared         Enable the shared libraries (disabled)
   --enable-default-shared Use shared libraries by default (disabled)
   --enable-distrib        build for distribution, optimized and strip symbols (enabled)
@@ -1744,6 +1747,19 @@ MAIL_VERSION=$MAIL_MAJOR_VERSION.$MAIL_MINOR_VERSION.$MAIL_MICRO_VERSION
 
 
 
+
+
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether NLS is requested" >&5
+$as_echo_n "checking whether NLS is requested... " >&6; }
+# Check whether --enable-nls was given.
+if test "${enable_nls+set}" = set; then :
+  enableval=$enable_nls; USE_NLS=$enableval
+else
+  USE_NLS=yes
+fi
+
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $USE_NLS" >&5
+$as_echo "$USE_NLS" >&6; }
 
 
 ac_aux_dir=
