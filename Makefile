@@ -25,3 +25,4 @@ test:	build
 
 $(eval $(call ada_library,$(NAME)))
 
+.PHONY: tools
