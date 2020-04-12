@@ -4,7 +4,7 @@ with "mailada";
 
 project MailAda_Tools is
 
-   Use_NLS    : Config.Yes_No := "No";
+   Use_NLS    : Config.Yes_No := "@USE_NLS@";
 
    for Languages use ("Ada");
 
