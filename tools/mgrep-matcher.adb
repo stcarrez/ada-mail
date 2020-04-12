@@ -19,14 +19,14 @@ with Ada.Strings.Unbounded;
 with Ada.Strings.Equal_Case_Insensitive;
 with Mail.Headers;
 package body Mgrep.Matcher is
-   
+
    use Ada.Strings.Unbounded;
    use type Mgrep.Printer.Mail_Result_Access;
 
    overriding
    procedure New_Mail (Handler : in out Mail_Processor) is
    begin
-      if Handler.Result /= null and then Handler.Match_Found Then
+      if Handler.Result /= null and then Handler.Match_Found then
          Handler.Match.Collector.Add (Handler.Result);
       end if;
       if Handler.Result = null then
