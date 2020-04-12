@@ -55,5 +55,5 @@ package body Mgrep is
       Util.Log.Loggers.Initialize (Log_Config);
 
    end Configure_Logs;
-   
+
 end Mgrep;

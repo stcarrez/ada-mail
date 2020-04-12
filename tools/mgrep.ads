@@ -19,12 +19,12 @@ with Intl;
 package Mgrep is
 
    function "-" (Message : in String) return String is (Intl."-" (Message));
-   
+
 private
 
    --  Configure the logs.
    procedure Configure_Logs (Debug   : in Boolean;
                              Dump    : in Boolean;
                              Verbose : in Boolean);
-   
+
 end Mgrep;
